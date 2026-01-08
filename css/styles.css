@@ -112,9 +112,15 @@ footer {
   margin: 2rem 0;
 }
 
-.photo-wrapper img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+  border-radius: 50%;
 }
