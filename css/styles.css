@@ -88,4 +88,11 @@ footer {
   color: #555;
   border-top: 1px solid #e0e0e0;
   background-color: #ffffff;
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 2rem auto 1.5rem;
 }
