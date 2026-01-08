@@ -105,4 +105,15 @@ footer {
   border-radius: 50%;
   display: block;
   margin: 2rem auto 1.5rem;
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.photo-wrapper img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
 }
