@@ -131,6 +131,18 @@ h1, h2 {
 section p {
   margin-bottom: 1rem;
 
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.photo-wrapper img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 
 }
