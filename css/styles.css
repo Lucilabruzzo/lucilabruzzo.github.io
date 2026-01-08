@@ -1,6 +1,4 @@
-/* =====================
-   Reset básico
-===================== */
+
 body {
   margin: 0;
   padding: 0;
@@ -184,4 +182,12 @@ footer {
     width: 220px;
     height: 220px;
   }
+}
+main > section:first-of-type {
+  text-align: center;
+}
+
+main > section:first-of-type ul {
+  display: inline-block;
+  text-align: left;
 }
