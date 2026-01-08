@@ -33,15 +33,14 @@
       <div class="photo-wrapper">
         <img src="images/lucila-bruzzo.jpg" alt="Lucila Bruzzo, terapeuta online" class="profile-photo">
       </div>
-
-      <!-- Nombre debajo de la foto -->
       <h2 class="hero-name">Lucila Bruzzo</h2>
     </div>
   </section>
 
   <!-- Contenido principal -->
   <main>
-    <section>
+
+    <section class="reveal">
       <h2>Terapia online para personas en movimiento</h2>
       <p>
         Acompaño procesos terapéuticos de manera online, especialmente a personas migrantes,
@@ -55,7 +54,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="reveal">
       <h2>Sobre mi trabajo</h2>
       <p>
         Soy psicóloga, nacida en la Patagonia argentina y formada en la Universidad Nacional
@@ -69,7 +68,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="reveal">
       <h2>Modalidad</h2>
       <ul>
         <li>Terapia individual</li>
@@ -78,7 +77,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="reveal">
       <h2>Contacto</h2>
       <p>
         Si estás considerando iniciar un proceso terapéutico o querés realizar una consulta,
@@ -88,11 +87,30 @@
         <a href="contact.html">Ir a la página de contacto</a>
       </p>
     </section>
+
   </main>
 
   <footer>
     <p>© Lucila Bruzzo · Terapia online</p>
   </footer>
+
+  <!-- Scroll reveal JS -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      reveals.forEach(section => {
+        const elementTop = section.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          section.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
 
 </body>
 </html>
