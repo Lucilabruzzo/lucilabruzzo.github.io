@@ -1,35 +1,55 @@
-/* Reset básico */
+/* =====================
+   Reset básico
+===================== */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
   line-height: 1.6;
   color: #222;
-  background-color: #fafafa;
+  background-color: #fdfdfc;
 }
 
-/* Contenedor general */
+/* =====================
+   Contenedor general
+===================== */
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
-/* Header */
+/* =====================
+   Header / Hero
+===================== */
 header {
   text-align: center;
   padding: 2.5rem 1rem 1.5rem;
 }
 
-header h1 {
-  margin-bottom: 0.5rem;
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #fff7f0;
 }
 
-header p {
-  color: #555;
+.hero h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.8rem;
+  color: #5b3a29;
+  margin: 1rem 0 0.5rem;
 }
 
-/* Navegación */
+.hero-subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #7a5a45;
+  margin-bottom: 2rem;
+}
+
+/* =====================
+   Navegación
+===================== */
 nav {
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
@@ -57,21 +77,30 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Secciones */
+/* =====================
+   Secciones y texto
+===================== */
 section {
   margin-bottom: 2.5rem;
 }
 
 section h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.02em;
   margin-bottom: 0.75rem;
 }
 
-/* Listas */
+section p {
+  margin-bottom: 1rem;
+}
+
+/* =====================
+   Listas y links
+===================== */
 ul {
   padding-left: 1.2rem;
 }
 
-/* Links */
 a {
   color: #2a5db0;
 }
@@ -80,7 +109,26 @@ a:hover {
   opacity: 0.85;
 }
 
-/* Footer */
+/* =====================
+   Imagen de perfil
+===================== */
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.profile-photo {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =====================
+   Footer
+===================== */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -88,91 +136,4 @@ footer {
   color: #555;
   border-top: 1px solid #e0e0e0;
   background-color: #ffffff;
-
-
-/* Imagen de perfil */
-.profile-photo {
-  max-width: 260px;
-  border-radius: 50%;
-  display: block;
-  margin: 2rem auto;
-}
-
-.profile-photo {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 2rem auto 1.5rem;
-
-img {
-  border-radius: 50%;
-}
-
-}
-
-  
-/* Tipografía más humana */
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background-color: #fdfdfc;
-}
-
-/* Títulos */
-h1, h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.02em;
-
-
-}
-
-/* Más aire visual */
-section p {
-  margin-bottom: 1rem;
-
-.photo-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.photo-wrapper img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-
-  /* Imagen de perfil */
-.photo-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.photo-wrapper img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.photo-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.profile-photo {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.profile-photo {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
 }
