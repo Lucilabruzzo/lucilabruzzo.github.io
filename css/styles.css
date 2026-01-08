@@ -158,6 +158,18 @@ section p {
   border-radius: 50%;
   object-fit: cover;
 }
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.profile-photo {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
 
 }
