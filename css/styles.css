@@ -100,8 +100,8 @@ footer {
   border-top: 1px solid #e0e0e0;
   background-color: #ffffff;
 .profile-photo {
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
@@ -119,8 +119,8 @@ footer {
 }
 
 .profile-photo {
-  width: 200px;
-  height: 200px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   border-radius: 50%;
 .profile-photo {
