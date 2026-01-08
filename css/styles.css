@@ -139,3 +139,57 @@ footer {
   border-top: 1px solid #e0e0e0;
   background-color: #ffffff;
 }
+/* Hero moderno con transición */
+.hero-modern {
+  background-image: url('images/tu-imagen-de-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 1rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero-modern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-modern .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animación suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #7a5a45;
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #5b3a29;
+}
