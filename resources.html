@@ -1,128 +1,152 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recursos | Lucila Bruzzo – Terapia online</title>
-  <meta name="description" content="Recursos de psicología: audios, meditaciones, cuadernillos y contenidos sobre emociones, migración y procesos personales.">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<link rel="stylesheet" href="css/styles.css">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  
-<body>
-<nav>
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="online-therapy.html">Terapia online</a></li>
-    <li><a href="migration-therapy.html">Migración</a></li>
-    <li><a href="resources.html">Recursos</a></li>
-    <li><a href="contact.html">Contacto</a></li>
-  </ul>
-</nav>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
 
-  <header>
-    <h1>Recursos</h1>
-    <p>Material para acompañar procesos personales</p>
-  </header>
+@layer base {
+  :root {
+    --background: 30 30% 98%;
+    --foreground: 25 20% 20%;
 
-  <main>
+    --card: 30 25% 96%;
+    --card-foreground: 25 20% 20%;
 
-    <section>
-      <p>
-        En esta página comparto distintos recursos que he creado a lo largo de mi recorrido
-        profesional. Son materiales pensados como acompañamiento, reflexión y apoyo en
-        distintos momentos vitales.
-      </p>
-      <p>
-        Estos recursos no reemplazan un proceso terapéutico, pero pueden servir como
-        herramientas complementarias.
-      </p>
-    </section>
+    --popover: 30 30% 98%;
+    --popover-foreground: 25 20% 20%;
 
-    <section>
-      <h2>Cuadernillos y ejercicios</h2>
-      <ul>
-        <li>
-          <strong>Cuadernillo de emociones</strong><br>
-          Un espacio para registrar, reconocer y trabajar emociones.<br>
-          <a href="https://drive.google.com/file/d/1NVnbIbaMY6sziiz2QOk4OjQJDDt06wff/view" target="_blank">
-            Acceder al cuadernillo
-          </a>
-        </li>
-        <li>
-          <strong>Visualización para alcanzar los sueños</strong><br>
-          Ejercicio guiado de visualización.<br>
-          <a href="https://drive.google.com/file/d/1Y_otR2XugvJDowdj_56lzn-vTveZSx6U/view" target="_blank">
-            Acceder al recurso
-          </a>
-        </li>
-      </ul>
-    </section>
+    --primary: 25 35% 45%;
+    --primary-foreground: 30 30% 98%;
 
-    <section>
-      <h2>Audios y podcast</h2>
-      <ul>
-        <li>
-          <strong>Podcast</strong><br>
-          Reflexiones sobre procesos psicológicos, emociones y vida cotidiana.<br>
-          <a href="https://open.spotify.com/show/30Hn5B0d7V4gX8GE2nrm0u" target="_blank">
-            Escuchar en Spotify
-          </a>
-        </li>
-        <li>
-          <strong>Interpretación de los sueños</strong><br>
-          Episodio sobre el trabajo clínico con los sueños.<br>
-          <a href="https://www.ivoox.com/en/interpretacion-suenos-audios-mp3_rf_72201595_1.html" target="_blank">
-            Escuchar el audio
-          </a>
-        </li>
-        <li>
-          <strong>Meditación guiada para manejar emociones abrumadoras</strong><br>
-          Audio de acompañamiento para momentos de intensidad emocional.<br>
-          <a href="https://www.ivoox.com/en/meditacion-guiada-para-manejar-emociones-abrumadoras-audios-mp3_rf_75965691_1.html" target="_blank">
-            Escuchar la meditación
-          </a>
-        </li>
-      </ul>
-    </section>
+    --secondary: 30 20% 92%;
+    --secondary-foreground: 25 20% 25%;
 
-    <section>
-  <h2>Perfil profesional</h2>
-  <p>
-    También podés encontrarme en la plataforma
-    <em>It’s Complicated</em>.
-  </p>
-  <p>
-    <a href="https://complicated.life/psychologist-lucila-bruzzo" target="_blank">
-      Ver perfil en It’s Complicated
-    </a>
-  </p>
-</section>
+    --muted: 30 15% 94%;
+    --muted-foreground: 25 10% 45%;
 
+    --accent: 25 40% 88%;
+    --accent-foreground: 25 30% 25%;
 
-    <section>
-      <p>
-        Si estos materiales resuenan con lo que estás atravesando y sentís que necesitás
-        un espacio de acompañamiento más personalizado, podés contactarme para coordinar
-        una primera sesión.
-      </p>
-      <p>
-        <a href="contact.html">Ir a la página de contacto</a>
-      </p>
-    </section>
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-  </main>
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 25 35% 45%;
 
-  <footer>
-    <p>© Lucila Bruzzo · Terapia online</p>
-    <p>
-      <a href="index.html">Inicio</a> ·
-      <a href="online-therapy.html">Terapia online</a> ·
-      <a href="migration-therapy.html">Migración</a> ·
-      <a href="contact.html">Contacto</a>
-    </p>
-  </footer>
+    --radius: 0.5rem;
 
-</body>
-</html>
+    /* Custom tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(30 30% 98%) 0%, hsl(25 40% 95%) 100%);
+    --text-serif: 'Cormorant Garamond', Georgia, serif;
+    --text-sans: 'Inter', system-ui, sans-serif;
+    --shadow-soft: 0 4px 20px -4px hsl(25 20% 20% / 0.08);
+    --shadow-elevated: 0 8px 40px -8px hsl(25 20% 20% / 0.12);
+
+    /* Contact button colors */
+    --whatsapp: 142 70% 45%;
+    --whatsapp-foreground: 0 0% 100%;
+    --email: 210 60% 50%;
+    --email-foreground: 0 0% 100%;
+    --calendar: 25 35% 45%;
+    --calendar-foreground: 30 30% 98%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 15% 10%;
+    --foreground: 30 20% 92%;
+
+    --card: 25 15% 12%;
+    --card-foreground: 30 20% 92%;
+
+    --popover: 25 15% 10%;
+    --popover-foreground: 30 20% 92%;
+
+    --primary: 30 35% 70%;
+    --primary-foreground: 25 15% 10%;
+
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 30 20% 92%;
+
+    --muted: 25 15% 18%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 25 20% 22%;
+    --accent-foreground: 30 20% 92%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 15% 20%;
+    --input: 25 15% 20%;
+    --ring: 30 35% 70%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--text-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--text-serif);
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-4xl mx-auto px-6 py-16 md:py-24;
+  }
+
+  .heading-display {
+    font-family: var(--text-serif);
+    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
+  }
+
+  .heading-section {
+    font-family: var(--text-serif);
+    @apply text-2xl md:text-3xl font-light tracking-tight;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
