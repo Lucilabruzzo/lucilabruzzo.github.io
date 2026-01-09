@@ -1,3 +1,15 @@
+
+    :root {
+  --bg-main: #f6f4e9;      /* fondo general suave */
+  --bg-hero: #f6f4e9;      /* hero + nav (MISMO color) */
+  --bg-card: #ffffff;     /* cajas / tarjetas */
+  --accent: #7a5a45;      /* marrón principal */
+  --accent-dark: #5b3a29; /* marrón oscuro */
+}
+
+
+
+
 /* =====================
    Reset y base
 ===================== */
