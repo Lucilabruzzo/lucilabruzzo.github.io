@@ -275,3 +275,9 @@ footer {
   transform: translateY(2px);
 }
 
+header {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1rem 2rem;
+  text-align: center;
+}
