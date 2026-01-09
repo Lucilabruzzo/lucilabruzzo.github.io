@@ -85,11 +85,18 @@ nav a:hover::after {
   background-color: var(--bg-hero); /* 🔥 elimina el corte */
   text-align: center;
 }
+
 .hero {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--bg-hero);
+  text-align: center;
+  width: 100%;
 }
+
+
 
 .hero p {
   color: #4a3b32;
