@@ -282,3 +282,10 @@ header {
   padding: 3rem 1rem 2rem;
   text-align: center;
 }
+
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 1.5rem;
+  }
+}
