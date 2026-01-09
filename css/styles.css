@@ -312,4 +312,10 @@ section:nth-of-type(5) { animation-delay: 0.5s; }
 }
 
 
+@media screen and (max-width: 768px) {
+  .about-split {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+}
 
