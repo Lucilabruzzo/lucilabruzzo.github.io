@@ -182,3 +182,50 @@ h1, h2 {
 section p {
   margin-bottom: 1rem;
 }
+
+
+
+
+
+/* =====================
+   Scroll suave entre secciones
+===================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =====================
+   Primera sección centrada
+===================== */
+main > section:first-of-type {
+  text-align: center;
+}
+
+/* =====================
+   Animación suave al llegar a una sección
+===================== */
+section {
+  scroll-margin-top: 100px;
+}
+
+/* =====================
+   Enlaces del menú (feedback visual)
+===================== */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #7a5a45;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
