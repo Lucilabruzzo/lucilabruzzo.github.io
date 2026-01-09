@@ -1,177 +1,92 @@
- 
-
-<!DOCTYPE html> 
-
-<html lang="es"> 
-
-<head> 
-
-  <meta charset="UTF-8"> 
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-  <title>Lucila Bruzzo | Terapia online para migrantes y expatriados</title> 
-
-  <meta name="description" content="Lucila Bruzzo, psicóloga. Terapia online para personas migrantes, expatriadas y en procesos de cambio. Acompañamiento psicológico en español e inglés."> 
-
-  <link rel="stylesheet" href="css/styles.css"> 
-
-</head> 
-
-  
-
-<body> 
-
-<nav> 
-
-  <ul> 
-
-    <li><a href="#index.html">Inicio</a></li> 
-
-    <li><a href="#online-therapy.html">Terapia online</a></li>  
-
-    <li><a href="#migration-therapy.html">Migración</a></li>  
-
-<li><a href="#resources.html">Recursos</a></li>  
-
-    <li><a href="#contacto.html">Contacto</a></li> 
-
-  </ul> 
-
-</nav> 
-
-  
-
-  <header> 
-
-  
-
-    <img src="images/lucila-bruzzo.jpg" alt="Lucila Bruzzo, terapeuta online" class="profile-photo"> 
-
-  
-
-    <h1>Lucila Bruzzo</h1> 
-
-    <h3>Psicoterapeuta</h3> 
-
-   
-
-   
-
-  </header> 
-
-  
-
-  <main> 
-
-  
-
-    <section> 
-
-      <h2>Terapia online para personas en movimiento</h2> 
-
-      <p> 
-
-        Acompaño procesos terapéuticos de manera online, especialmente a personas migrantes, 
-
-        expatriadas que atraviesan cambios vitales o momentos de malestar emocional. 
-
-      </p> 
-
-      <p> 
-
-        Trabajo desde una escucha clínica cuidadosa, ofreciendo un espacio para poner en 
-
-        palabras lo que cuesta, comprender lo que está ocurriendo y construir nuevas 
-
-        formas de posicionarse frente a los desafíos de la propia vida. 
-
-      </p> 
-
-    </section> 
-
-  
-
-    <section> 
-
-      <h2>Sobre mi trabajo</h2> 
-
-      <p> 
-
-        Soy psicóloga, nacida en la Patagonia argentina y formada en la Universidad Nacional 
-
-        de La Plata. Mi recorrido personal y profesional está atravesado por la experiencia 
-
-        migratoria y por el trabajo con personas que buscan rearmar su identidad y sus 
-
-        proyectos en nuevos contextos. 
-
-      </p> 
-
-      <p> 
-
-        Atiendo de manera online a personas que sienten ansiedad, tristeza, desorientación, dificultades para avanzar o para sostener objetivos, especialmente 
-
-        en contextos de cambio y migración. 
-
-      </p> 
-
-    </section> 
-
-  
-
-    <section> 
-
-      <h2>Modalidad</h2> 
-
-      <ul> 
-
-        <li>Terapia individual</li> 
-
-        <li>Modalidad online</li> 
-
-        <li>Idioma: español e inglés</li> 
-
-      </ul> 
-
-    </section> 
-
-  
-
-    <section> 
-
-      <h2>Contacto</h2> 
-
-      <p> 
-
-        Si estás considerando iniciar un proceso terapéutico o querés realizar una consulta, 
-
-        podés ponerte en contacto conmigo para coordinar una primera sesión. 
-
-      </p> 
-
-      <p> 
-
-        <a href="contact.html">Ir a la página de contacto</a> 
-
-      </p> 
-
-    </section> 
-
-  
-
-  </main> 
-
-  
-
-  <footer> 
-
-    <p>© Lucila Bruzzo · Terapia online</p> 
-
-  </footer> 
-
-  
-
-</body> 
-
-</html> 
+import { motion } from "framer-motion";
+import { Calendar, MessageCircle, Mail } from "lucide-react";
+
+const Contact = () => {
+  // Reemplaza estos valores con tus datos reales
+  const whatsappNumber = "1234567890"; // Tu número de WhatsApp sin + ni espacios
+  const email = "lucila@ejemplo.com"; // Tu email
+  const calendlyUrl = "https://calendly.com/tuusuario"; // Tu URL de Calendly
+
+  const contactButtons = [
+    {
+      icon: Calendar,
+      label: "Agendar sesión",
+      description: "Reserva tu primera consulta",
+      href: calendlyUrl,
+      className: "bg-calendar text-calendar-foreground hover:bg-calendar/90",
+    },
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
+      description: "Escríbeme directamente",
+      href: `https://wa.me/${whatsappNumber}?text=Hola%20Lucila,%20me%20gustaría%20consultar%20sobre%20tus%20servicios%20de%20terapia.`,
+      className: "bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90",
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      description: "Envíame un correo",
+      href: `mailto:${email}?subject=Consulta%20sobre%20terapia`,
+      className: "bg-email text-email-foreground hover:bg-email/90",
+    },
+  ];
+
+  return (
+    <section id="contacto" className="bg-card">
+      <div className="section-container">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="space-y-12"
+        >
+          <div className="text-center max-w-2xl mx-auto space-y-4">
+            <h2 className="heading-section text-foreground">Contacto</h2>
+            <p className="text-body">
+              Si estás considerando iniciar un proceso terapéutico o querés realizar
+              una consulta, podés ponerte en contacto conmigo para coordinar una
+              primera sesión.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            {contactButtons.map((button, index) => (
+              <motion.a
+                key={button.label}
+                href={button.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className={`group flex flex-col items-center gap-3 p-6 rounded-2xl transition-all duration-300 shadow-md hover:shadow-xl ${button.className}`}
+              >
+                <button.icon className="w-8 h-8" />
+                <span className="font-medium text-lg">{button.label}</span>
+                <span className="text-xs opacity-80">{button.description}</span>
+              </motion.a>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-center pt-8"
+          >
+            <p className="text-sm text-muted-foreground">
+              Las sesiones se realizan de manera online a través de videollamada.
+            </p>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
