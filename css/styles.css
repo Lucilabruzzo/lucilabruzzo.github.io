@@ -1,6 +1,6 @@
 :root {
   /* 🎨 COLORES PRINCIPALES (tocás acá y cambia todo) */
-  --bg-main: #f6f1e9;        /* fondo general */
+  --bg-main: #ffffff;        /* fondo general */
   --bg-hero: #f6f1e9;        /* hero + nav (MISMO color → sin corte) */
   --bg-card: #ffffff;       /* cajas / tarjetas */
   --accent: #7a5a45;        /* marrón principal */
