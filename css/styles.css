@@ -24,9 +24,19 @@ body {
 ===================== */
 
 nav {
-  background-color: #fff7f0;
+  background-color: #e0dad5;
   border-bottom: 1px solid #e6e0da;
 }
+
+nav {
+  background-color: transparent;
+  border-bottom: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
 
 nav ul {
   list-style: none;
