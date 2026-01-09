@@ -1,10 +1,10 @@
 :root {
   /* 🎨 COLORES PRINCIPALES (tocás acá y cambia todo) */
   --bg-main: #ffffff;        /* fondo general */
-  --bg-hero: #e6e0da;        /* hero + nav (MISMO color → sin corte) */
+  --bg-hero: #f4f1ee;        /* hero + nav (MISMO color → sin corte) */
   --bg-card: #ffffff;       /* cajas / tarjetas */
   --accent: #7a5a45;        /* marrón principal */
-  --accent-dark: #5b3a29;   /* marrón oscuro */
+  --accent-dark: #a1887a;   /* marrón oscuro */
   --hover-glow: #4d4a46;    /* sombra hover nav */
 }
 
@@ -84,6 +84,11 @@ nav a:hover::after {
   padding-top: 0rem;
   background-color: var(--bg-hero); /* 🔥 elimina el corte */
   text-align: center;
+}
+.hero {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: var(--bg-hero);
 }
 
 .hero p {
