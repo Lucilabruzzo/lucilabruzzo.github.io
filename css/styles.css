@@ -88,7 +88,7 @@ nav a:hover::after {
 
 .hero-container {
   max-width: 800px;
-  padding: 2rem 1rem; /* ⬅ márgenes más angostos */
+  padding: 1.5rem 1rem; /* ⬅ márgenes más angostos */
   opacity: 0;
   transform: translateY(30px);
   animation: fadeIn 0.9s ease forwards;
