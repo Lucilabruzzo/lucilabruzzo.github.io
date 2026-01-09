@@ -58,7 +58,7 @@ nav a:hover::after {
 }
 
 /* =====================
-   Hero
+   HERO (solo index)
 ===================== */
 
 .hero {
@@ -131,6 +131,28 @@ nav a:hover::after {
 }
 
 /* =====================
+   Header páginas internas
+===================== */
+
+.page-header {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  background-color: #fff7f0;
+}
+
+.page-header h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.2rem;
+  color: #5b3a29;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: #7a5a45;
+  font-size: 1.1rem;
+}
+
+/* =====================
    Main y secciones
 ===================== */
 
@@ -148,6 +170,22 @@ section {
 section h2 {
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0.75rem;
+}
+
+/* =====================
+   Links y listas
+===================== */
+
+ul {
+  padding-left: 1.2rem;
+}
+
+a {
+  color: #2a5db0;
+}
+
+a:hover {
+  opacity: 0.85;
 }
 
 /* =====================
