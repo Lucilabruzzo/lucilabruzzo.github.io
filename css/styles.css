@@ -327,3 +327,19 @@ header {
   padding: 3rem 1.5rem 2rem;
   text-align: center;
 }
+
+
+/* =====================
+   Animación al hacer scroll
+===================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
