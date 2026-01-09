@@ -152,7 +152,7 @@ nav a:hover::after {
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1rem; /* ⬅ márgenes angostos */
+  padding: 1rem 0.7rem; /* ⬅ márgenes angostos */
 }
 
 section {
@@ -197,7 +197,7 @@ section h2 {
 
 .about-box {
   background-color: var(--bg-card);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
