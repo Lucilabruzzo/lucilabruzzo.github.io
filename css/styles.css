@@ -102,6 +102,20 @@ footer {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.photo-wrapper img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .hero {
   text-align: center;
   padding: 3rem 1rem;
