@@ -20,7 +20,7 @@ body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.6;
-  color: #222;
+  color: #3a2f28;
   background-color: var(--bg-main);
 }
 
@@ -38,7 +38,7 @@ nav ul {
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 }
 
 nav li {
@@ -77,14 +77,23 @@ nav a:hover::after {
 ===================== */
 
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 4rem;
+  padding-top: 0rem;
   background-color: var(--bg-hero); /* 🔥 elimina el corte */
   text-align: center;
 }
+
+.hero p {
+  color: #4a3b32;
+}
+
+.hero-container {
+  max-width: 720px; /* un poco más angosto */
+}
+
 
 .hero-container {
   max-width: 800px;
