@@ -406,6 +406,25 @@ header {
 }
 
 
+/* Reset básico y mobile-first */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif; /* o la que uses */
+  line-height: 1.6;
+  font-size: 16px;
+  color: #3a2f2a;
+  background-color: #ffffff;
+}
+
+/* Evita scroll horizontal en móvil */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
