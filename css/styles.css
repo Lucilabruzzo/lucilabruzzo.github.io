@@ -168,6 +168,59 @@ nav a:hover::after {
   color: var(--accent);
 }
 
+
+.modalidad {
+  padding: 80px 10%;
+  background-color: #faf8f5;
+}
+
+.modalidad h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #3a2f2a;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card .icon {
+  font-size: 32px;
+  background-color: #efe3d9;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #3a2f2a;
+}
+
+.card p {
+  font-size: 16px;
+  color: #6b5e57;
+  line-height: 1.6;
+}
+
+
+
 /* =====================
    Main y secciones
 ===================== */
