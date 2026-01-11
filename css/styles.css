@@ -182,18 +182,26 @@ nav a:hover::after {
 
 .cards {
   display: flex;
+  justify-content: center; /* centra las 3 tarjetas */
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;       /* 🔑 evita que se apilen */
 }
 
+
 .card {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 20px;
-  padding: 40px 30px;
-  flex: 1;
-  min-width: 250px;
+  padding: 30px 25px;
+  width: 300px;              /* 🔑 tamaño controlado */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
+
 
 .card .icon {
   font-size: 32px;
@@ -386,4 +394,19 @@ header {
   .hero {
     padding-top: 1.5rem;
   }
+@media (max-width: 900px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;
+  }
 }
+
+
+}
+
+
+
