@@ -31,6 +31,31 @@ body {
   background-color: var(--bg-main);
 }
 
+/* =====================
+   Espaciado tipográfico base
+===================== */
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+h1 {
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 0.75rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+
 html,
 body {
   max-width: 100%;
@@ -286,3 +311,10 @@ footer {
     font-size: 2.2rem;
   }
 }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
