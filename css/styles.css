@@ -656,7 +656,77 @@ header {
 
 
 
-  
+  .contact-cta {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.contact-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-cta .intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cta-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.cta-card {
+  display: block;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cta-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.cta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Colores */
+.cta-card.brown { background-color: #9c6b4e; }
+.cta-card.green { background-color: #25c55e; }
+.cta-card.blue  { background-color: #3b82c4; }
+
+.contact-cta .note {
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
