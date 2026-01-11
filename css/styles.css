@@ -711,10 +711,13 @@ header {
 }
 
 /* Colores */
-.cta-card.brown { background-color: #9c6b4e; }
-.cta-card.green { background-color: #25c55e; }
-.cta-card.blue  { background-color: #3b82c4; }
+.cta-card.brown { background-color:  #f7e6c6; } /* marrón suave */
+.cta-card.green { background-color: #c6f7d0; } /* verde apagado */
+.cta-card.blue  { background-color: #c6d7f7; } /* azul grisáceo */
 
+
+
+  
 .contact-cta .note {
   font-size: 0.95rem;
   opacity: 0.7;
@@ -741,9 +744,7 @@ header {
 
 
 
-.cta-card.brown { background-color:  #f7e6c6; } /* marrón suave */
-.cta-card.green { background-color: #c6f7d0; } /* verde apagado */
-.cta-card.blue  { background-color: #c6d7f7; } /* azul grisáceo */
+
 
 
 
