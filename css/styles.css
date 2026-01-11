@@ -711,9 +711,9 @@ header {
 }
 
 /* Colores */
-.cta-card.brown { background-color:  #d9d8d7; } /* marrón suave */
-.cta-card.green { background-color: #b8d9cf; } /* verde apagado */
-.cta-card.blue  { background-color: #b8cbd9; } /* azul grisáceo */
+.cta-card.brown { background-color: #d9cdb8; } /* marrón suave */
+.cta-card.green { background-color: #b8d9b9; } /* verde apagado */
+.cta-card.blue  { background-color: #b8cdd9; } /* azul grisáceo */
 
 
 
