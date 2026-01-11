@@ -6,22 +6,35 @@
   --accent: #7a5a45;        /* marrón principal */
   --accent-dark: #a1887a;   /* marrón oscuro */
   --hover-glow: #4d4a46;    /* sombra hover nav */
+  --name-color: #7a5a45; /* color del nombre */
 }
 
 /* =====================
    Reset y base
 ===================== */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.6;
+  font-size: 16px;
   color: #3a2f28;
   background-color: var(--bg-main);
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* =====================
@@ -29,7 +42,7 @@ body {
 ===================== */
 
 nav {
-  background-color: var(--bg-hero); /* MISMO color que hero */
+  background-color: var(--bg-hero);
   border-bottom: 1px solid #e6e0da;
 }
 
@@ -37,12 +50,11 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  margin: 0;
   padding: 0.8rem 0;
 }
 
 nav li {
-  margin: 0 1.2rem; /* un poco más angosto */
+  margin: 0 1.2rem;
 }
 
 nav a {
@@ -81,35 +93,14 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 0rem;
-  background-color: var(--bg-hero); /* 🔥 elimina el corte */
-  text-align: center;
-}
-
-.hero {
-  min-height: calc(100vh - 80px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: var(--bg-hero);
   text-align: center;
   width: 100%;
 }
 
-
-
-.hero p {
-  color: #171310;
-}
-
-.hero-container {
-  max-width: 720px; /* un poco más angosto */
-}
-
-
 .hero-container {
   max-width: 800px;
-  padding: 1.5rem 1rem; /* ⬅ márgenes más angostos */
+  padding: 1.5rem 1rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeIn 0.9s ease forwards;
@@ -123,14 +114,14 @@ nav a:hover::after {
 }
 
 .hero-image-wrapper {
-  position: relative;
   width: 220px;
   height: 220px;
+  margin: 0 auto 1.5rem;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid var(--accent);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  margin: 0 auto 1.5rem;
+  position: relative;
 }
 
 .hero-image {
@@ -139,27 +130,11 @@ nav a:hover::after {
   object-fit: cover;
 }
 
-.hero-badge {
-  position: absolute;
-  bottom: -6px;
-  right: -6px;
-  width: 32px;
-  height: 32px;
-  background-color: var(--accent-dark);
-  color: #fff;
-  border-radius: 50%;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .hero h1 {
-  font-family: Georgia, Times New Roman, serif;
   font-size: 2.8rem;
-  font-weight:600;
-  letter-spacing:0.02em;
-  color: var(--accent-dark);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--name-color);
   margin-bottom: 0.5rem;
 }
 
@@ -168,10 +143,14 @@ nav a:hover::after {
   color: var(--accent);
 }
 
+/* =====================
+   Modalidad / Cards
+===================== */
 
 .modalidad {
   padding: 80px 10%;
   background-color: #faf8f5;
+  text-align: center;
 }
 
 .modalidad h2 {
@@ -182,26 +161,29 @@ nav a:hover::after {
 
 .cards {
   display: flex;
-  justify-content: center; /* centra las 3 tarjetas */
+  justify-content: center;
   gap: 30px;
-  flex-wrap: nowrap;       /* 🔑 evita que se apilen */
+  flex-wrap: nowrap;
 }
 
-
 .card {
+  width: 300px;
   background-color: #ffffff;
   border-radius: 20px;
   padding: 30px 25px;
-  width: 300px;              /* 🔑 tamaño controlado */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   text-align: left;
-
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
     background-color 0.3s ease;
 }
 
+.card:hover {
+  background-color: #f6eee8;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
 
 .card .icon {
   font-size: 32px;
@@ -224,75 +206,7 @@ nav a:hover::after {
 .card p {
   font-size: 16px;
   color: #6b5e57;
-  line-height: 1.6;
 }
-
-.card {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 40px 30px;
-  flex: 1;
-  min-width: 250px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-
-  /* 🔑 clave para el hover */
-  transition: 
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
-}
-
-.card:hover {
-  background-color: #f6eee8; /* tono suave */
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-}
-
-
-
-
-
-
-/* =====================
-   Main y secciones
-===================== */
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem 0.7rem; /* ⬅ márgenes angostos */
-}
-
-section {
-  margin-bottom: 4rem;
-  scroll-margin-top: 100px;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 0.9s ease forwards;
-}
-
-section:nth-of-type(1) { animation-delay: 0.1s; }
-section:nth-of-type(2) { animation-delay: 0.2s; }
-section:nth-of-type(3) { animation-delay: 0.3s; }
-section:nth-of-type(4) { animation-delay: 0.4s; }
-section:nth-of-type(5) { animation-delay: 0.5s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-section h2 {
-  margin-bottom: 0.75rem;
-}
-
-.about-box h3 {
-  margin-bottom: 1rem;
-  color: var(--accent-dark);
-}
-
 
 /* =====================
    About split
@@ -302,7 +216,6 @@ section h2 {
   display: grid;
   grid-template-columns: 2fr 1.3fr;
   gap: 3rem;
-  align-items: start;
   background-color: #faf6f2;
   padding: 3rem;
   border-radius: 12px;
@@ -312,10 +225,8 @@ section h2 {
   background-color: var(--bg-card);
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
-
-
 
 /* =====================
    CTA
@@ -354,46 +265,6 @@ footer {
    Responsive
 ===================== */
 
-@media screen and (max-width: 768px) {
-  .about-split {
-    grid-template-columns: 1fr;
-    padding: 2rem 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  main,
-  .hero-container {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-}
-
-/* =====================
-   Hover consistente botón "Conocé más"
-===================== */
-
-.soft-cta {
-  transition: text-shadow 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.soft-cta:hover {
-  text-shadow: 0 4px 12px var(--hover-glow);
-  transform: translateY(2px);
-}
-
-header {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 3rem 1rem 2rem;
-  text-align: center;
-}
-
-
-@media screen and (min-width: 768px) {
-  .hero {
-    padding-top: 1.5rem;
-  }
 @media (max-width: 900px) {
   .cards {
     flex-wrap: wrap;
@@ -405,27 +276,13 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  .about-split {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
 
-/* Reset básico y mobile-first */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }
-
-body {
-  font-family: 'Georgia', serif; /* o la que uses */
-  line-height: 1.6;
-  font-size: 16px;
-  color: #3a2f2a;
-  background-color: #ffffff;
-}
-
-/* Evita scroll horizontal en móvil */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-
-
