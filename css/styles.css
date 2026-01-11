@@ -1,7 +1,7 @@
 :root {
   /* 🎨 COLORES PRINCIPALES (tocás acá y cambia todo) */
   --bg-main: #ffffff;        /* fondo general */
-  --bg-hero: #f4f1ee;        /* hero + nav (MISMO color → sin corte) */
+  --bg-hero: #ffffff;        /* hero + nav (MISMO color → sin corte) */
   --bg-card: #ffffff;       /* cajas / tarjetas */
   --accent: #7a5a45;        /* marrón principal */
   --accent-dark: #a1887a;   /* marrón oscuro */
