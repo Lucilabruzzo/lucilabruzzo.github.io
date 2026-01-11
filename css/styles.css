@@ -219,6 +219,30 @@ nav a:hover::after {
   line-height: 1.6;
 }
 
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  /* 🔑 clave para el hover */
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #f6eee8; /* tono suave */
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
 
 
 /* =====================
