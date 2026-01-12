@@ -14,6 +14,11 @@ html { scroll-behavior: smooth;
 } 
 
 
+.hero-name {
+  color: #241911;
+}
+
+
 
 body { 
   margin: 0; 
