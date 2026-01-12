@@ -14,6 +14,16 @@ html { scroll-behavior: smooth;
 } 
 
 
+
+
+.list-narrow {
+  padding-left: 2rem;   /* sangría */
+  max-width: 600px;     /* más angosto que el texto */
+}
+
+
+
+
 .hero-name {
   color: #241911;
 }
