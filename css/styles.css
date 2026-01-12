@@ -753,7 +753,7 @@ header {
 .cta-button {
   display: inline-block;        /* ← clave */
   padding: 0.8rem 1.6rem;       /* tamaño razonable */
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 999px;         /* pill style elegante */
   text-decoration: none;
   font-weight: 500;
