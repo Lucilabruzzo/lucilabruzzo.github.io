@@ -63,6 +63,20 @@ section {
 }
 
 
+.about-split {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 3rem;
+  background-color: #faf6f2;
+  padding: 3rem 0; /* 👈 vertical, no lateral */
+}
+
+.about-text,
+.about-box {
+  display: flex;
+}
+
+
 
 
 
@@ -449,6 +463,11 @@ section h2 {
   border-radius: 12px; 
 
 }
+
+
+
+
+
 
 
 
