@@ -103,6 +103,26 @@ nav {
   background-color: var(--bg-hero); /* MISMO color que hero */ 
   border-bottom: 1px solid #e6e0da; 
 
+
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* para que quede por encima */
+  background-color: var(--bg-hero);
+}
+
+
+  body {
+  padding-top: 80px;
+}
+
+
+
+  
 } 
 
 
