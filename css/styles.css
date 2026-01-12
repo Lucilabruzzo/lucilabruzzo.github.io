@@ -771,6 +771,11 @@ header {
 
 
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 3rem;
+}
 
 
 
