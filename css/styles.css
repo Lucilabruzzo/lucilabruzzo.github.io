@@ -828,17 +828,40 @@ header {
 
 
 
+.modalidad .card {
+  width: 200px;          /* antes 300px */
+  padding: 20px 18px;    /* antes 40px 30px */
+  border-radius: 16px;
+}
+
+
+.modalidad .card .icon {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+
+
+
+.modalidad .card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.modalidad .card p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
 
 
 
 
 
-
-
-
-
-
-
+.modalidad .cards {
+  gap: 18px; /* antes 30px */
+}
 
 
 
