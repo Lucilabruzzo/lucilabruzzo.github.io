@@ -865,6 +865,51 @@ header {
 
 
 
+@media (max-width: 768px) {
+
+  /* CONTENEDORES */
+  .container,
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* MODALIDAD / CONTACTO */
+  .modalidad {
+    padding: 3rem 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modalidad .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-image-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  /* ABOUT SPLIT */
+  .about-split {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+}
 
 
 
