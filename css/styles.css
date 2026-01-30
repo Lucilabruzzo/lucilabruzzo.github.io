@@ -957,6 +957,15 @@ header {
   color: #7a5a45;
 }
 
+/* Títulos de artículos del blog */
+.blog-card h2 a {
+  color: #222; /* mismo color que tu texto principal */
+  text-decoration: none;
+}
+
+.blog-card h2 a:hover {
+  color: #7a5a45; /* tu color de marca al pasar el mouse */
+}
 
   
 }
