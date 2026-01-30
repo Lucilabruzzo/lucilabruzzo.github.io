@@ -194,48 +194,6 @@
     </footer>
 
 
-<script>
-  function setCookie(name, value, days) {
-    const d = new Date();
-    d.setTime(d.getTime() + (days*24*60*60*1000));
-    document.cookie = name + "=" + value + ";path=/;expires=" + d.toUTCString();
-  }
-
-  function getCookie(name) {
-    const cookieArr = document.cookie.split(';');
-    for(let cookie of cookieArr) {
-      let [key, value] = cookie.trim().split('=');
-      if (key === name) return value;
-    }
-    return null;
-  }
-
-  function acceptCookies() {
-    setCookie('cookie_consent', 'yes', 365);
-    document.getElementById('cookie-banner').style.display = 'none';
-    initAnalytics();
-  }
-
-  function initAnalytics() {
-    // Insertá tu código de Google Analytics aquí
-    (function(){
-      var gtagScript = document.createElement('script');
-      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-      gtagScript.async = true;
-      document.head.appendChild(gtagScript);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-D1Y4N6KXMT');
-    })();
-  }
-
-  // Si el usuario ya aceptó, cargamos Analytics
-  if (getCookie('cookie_consent') === 'yes') {
-    document.getElementById('cookie-banner').style.display = 'none';
-    initAnalytics();
-  }
 </script>
 
 	
