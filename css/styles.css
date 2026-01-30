@@ -909,6 +909,36 @@ header {
     padding: 2rem 1rem;
   }
 
+
+.hero-small {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  background: #f6efe9;
+}
+
+.hero-small h1 {
+  margin-bottom: 0.5rem;
+}
+
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.legal-content h2 {
+  margin-top: 2rem;
+  color: #7a5a45;
+}
+
+.legal-content p,
+.legal-content li {
+  color: #5a4a42;
+  line-height: 1.7;
+}
+
+
+  
 }
 
 
