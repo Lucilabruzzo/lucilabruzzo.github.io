@@ -326,7 +326,7 @@ nav a:hover::after {
   display: flex; 
   justify-content: center; /* centra las 3 tarjetas */ 
   gap: 30px; 
-  flex-wrap: nowrap; /* 🔑 evita que se apilen */ 
+  
 
 }
 
