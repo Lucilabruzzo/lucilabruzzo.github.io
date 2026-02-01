@@ -967,6 +967,83 @@ header {
   color: #7a5a45; /* tu color de marca al pasar el mouse */
 }
 
+
+  /* ================= MOBILE FIX MASTER ================= */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  /* NAV */
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  nav li {
+    margin: 0.4rem 0.6rem;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: auto;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-image-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* CONTENEDORES */
+  .container, main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* TARJETAS GENERAL */
+  .cards {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 340px;
+    padding: 1.4rem;
+  }
+
+  /* CTA CARDS (CONTACTO) */
+  .cta-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* ABOUT */
+  .about-split {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  /* BOTONES */
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+}
+
   
 }
 
