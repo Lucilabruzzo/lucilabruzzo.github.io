@@ -200,6 +200,29 @@ nav a:hover::after {
   max-width: 760px;
 }
 
+/* ===================== PROFILE PHOTO ===================== */
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 2.5rem;
+}
+
+.profile-photo img {
+  width: min(100%, 520px);
+  border-radius: 32px;
+  opacity: 0.72;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  filter: saturate(0.9);
+}
+
+.profile-photo--translucent img {
+  backdrop-filter: blur(0.5px);
+}
+
+
+
+
+
 .about-immersive::before {
   content: "";
   position: absolute;
