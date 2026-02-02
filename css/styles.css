@@ -187,6 +187,7 @@ nav a:hover::after {
   max-width: 40%;
   opacity: 0.18;
   pointer-events: none;
+  z-index: 0;
 }
 
 .about-image img {
@@ -205,6 +206,8 @@ nav a:hover::after {
   display: flex;
   justify-content: center;
   margin: 2rem 0 2.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .profile-photo img {
@@ -219,16 +222,17 @@ nav a:hover::after {
   backdrop-filter: blur(0.5px);
 }
 
-
-
-
-
 .about-immersive::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, rgba(255,255,255,0.95) 30%, rgba(255,255,255,0.6));
   z-index: 1;
+}
+.about-immersive > section,
+.about-immersive > .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* ===================== BOTONES ===================== */
