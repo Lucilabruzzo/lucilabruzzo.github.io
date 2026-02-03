@@ -1229,6 +1229,60 @@ html, body {
 .blog-card:nth-child(2) { animation-delay: 0.2s; }
 .blog-card:nth-child(3) { animation-delay: 0.3s; }
 
+/* ================= BLOG CARDS ================= */
+
+.blog-list {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background: #fdfaf7;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+/* Título */
+.blog-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  color: #2d2622;
+}
+
+/* Texto */
+.blog-card p {
+  color: #6b5e57;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Botón leer */
+.read-more {
+  display: inline-block;
+  font-weight: 600;
+  color: #7a5a45;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  border-color: #7a5a45;
+  letter-spacing: 0.5px;
+}
+
+/* ✨ Efecto hover de la tarjeta */
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+  background: #f6eee8;
+}
+
+
+  
 }
 
 
