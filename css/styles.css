@@ -1274,6 +1274,40 @@ body {
   border: 4px solid #7a5a45 !important;
 }
 
+
+  /* ===== FOTO PERFIL HERO ===== */
+.hero-image-wrapper {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+
+  border: 4px solid #7a5a45;      /* ← MARCO DE COLOR */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12); /* profundidad */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ===== TITULO PRINCIPAL ===== */
+.hero h1 {
+  color: #7a5a45;  /* color marca */
+  font-weight: 600;
+}
+
+
+.spotify-embed {
+  position: relative;
+  z-index: 5;
+  opacity: 1 !important;
+}
+
+  
 }
 
 
