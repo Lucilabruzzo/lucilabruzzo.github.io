@@ -206,4 +206,17 @@ header {
 header h1 {
   margin-bottom: 0.5rem;
 }
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #2f2f2f;
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 9999; /* 🔥 MÁS ALTO QUE TODO */
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+}
 
