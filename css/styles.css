@@ -299,6 +299,22 @@ header h1 {
   transform: translateY(-2px);
 }
 
+.newsletter {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-box {
+  background: #f6f3ef;
+  padding: 50px 40px;
+  border-radius: 16px;
+  max-width: 640px;   /* 🔥 ANCHO CONTROLADO */
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
 /* MENSAJE GRACIAS */
 #form-message {
   margin-top: 2rem;
