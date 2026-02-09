@@ -119,74 +119,48 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(".fade-in");
 
-  const observer = new IntersectionObserver((entries) => {
+  // ===== FADE IN =====
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2 };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     });
-  }, { threshold: 0.15 });
+  }, appearOptions);
 
-  elements.forEach(el => observer.observe(el));
-});
-</script>
+  faders.forEach(fader => appearOnScroll.observe(fader));
 
-// ===== FADE IN =====
-  <script>
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.2 };
-
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => appearOnScroll.observe(fader));
-</script>
-
-
-
-
-  
-
-
-
-  
-
-  <script>
-
- // ===== NEWSLETTER =====
+  // ===== NEWSLETTER =====
   const form = document.getElementById("newsletter-form");
   const message = document.getElementById("form-message");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  if(form){
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    const data = {
-      nombre: document.querySelector('input[name="nombre"]').value,
-      email: document.querySelector('input[name="email"]').value
-    };
+      const data = {
+        nombre: form.nombre.value,
+        email: form.email.value
+      };
 
-    fetch("https://script.google.com/macros/s/AKfycbw8FcDLeBVTGNGqDKUuC-_GE99ib-OQhhOaxTjjo_lCwHKGzxkI8IzYoBG-8ToPUTr5sw/exec", {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
+      fetch("https://script.google.com/macros/s/AKfycbw8FcDLeBVTGNGqDKUuC-_GE99ib-OQhhOaxTjjo_lCwHKGzxkI8IzYoBG-8ToPUTr5sw/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      form.style.display = "none";
+      message.style.display = "block";
     });
-
-    form.style.display = "none";
-    message.style.display = "block";
-  });
+  }
 
 });
 </script>
-
-
 
 
   
