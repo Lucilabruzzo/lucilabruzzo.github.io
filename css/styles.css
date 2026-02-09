@@ -222,53 +222,54 @@ header h1 {
 
 /* ===== NEWSLETTER SECTION ===== */
 /* ===== NEWSLETTER ESTILO ORIGINAL SUAVE ===== */
+/* ===== NEWSLETTER VERSIÓN MÁS COMPACTA ===== */
 
 .newsletter {
-  padding: 70px 20px;
+  padding: 50px 15px;
   display: flex;
   justify-content: center;
 }
 
 .newsletter-box {
-  background: #f3efe9; /* tono cálido suave como antes */
-  padding: 40px 35px;
-  border-radius: 14px;
-  max-width: 560px; /* más angosto */
+  background: #f6f2ed; /* tono más claro y suave */
+  padding: 26px 24px; /* -33% */
+  border-radius: 12px;
+  max-width: 380px; /* antes 560px */
   width: 100%;
   text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
 /* Título */
 .newsletter-box h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 18px; /* -20% */
+  margin-bottom: 8px;
   font-weight: 500;
 }
 
 /* Texto */
 .newsletter-box p {
-  font-size: 15px;
-  margin-bottom: 22px;
+  font-size: 12px; /* -20% */
+  margin-bottom: 18px;
 }
 
 /* Inputs */
 .newsletter-box input[type="text"],
 .newsletter-box input[type="email"] {
   width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 12px;
-  border-radius: 8px;
+  padding: 7px 9px; /* -33% */
+  margin-bottom: 9px;
+  border-radius: 7px;
   border: 1px solid #ddd;
-  font-size: 14px;
+  font-size: 12px; /* -20% */
   box-sizing: border-box;
 }
 
-/* Checkbox texto */
+/* Consentimiento */
 .newsletter-box .consent {
-  font-size: 13px;
+  font-size: 11px; /* -20% */
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 /* Botón */
@@ -276,17 +277,18 @@ header h1 {
   background-color: #7a6a62;
   color: white;
   border: none;
-  padding: 11px 22px;
-  border-radius: 8px;
-  font-size: 14px;
+  padding: 8px 16px; /* -33% */
+  border-radius: 7px;
+  font-size: 12px; /* -20% */
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .newsletter-box button:hover {
   background-color: #64554e;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
+
 
 <section class="newsletter fade-in">
   <div class="container newsletter-box">
