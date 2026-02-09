@@ -221,72 +221,84 @@ header h1 {
 }
 
 /* ===== NEWSLETTER SECTION ===== */
-/* ===== NEWSLETTER ESTILO ORIGINAL SUAVE ===== */
-/* ===== NEWSLETTER VERSIÓN MÁS COMPACTA ===== */
+/* ================= NEWSLETTER (MISMA ESCALA QUE BLOG CARDS) ================= */
 
 .newsletter {
-  padding: 50px 15px;
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
+  margin:3rem 0;
 }
 
 .newsletter-box {
-  background: #f6f2ed; /* tono más claro y suave */
-  padding: 26px 24px; /* -33% */
-  border-radius: 12px;
-  max-width: 380px; /* antes 560px */
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  background:#fdfaf7;                 /* mismo color que blog-card */
+  padding:2rem;                       /* EXACTO */
+  border-radius:18px;                 /* EXACTO */
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);  /* EXACTO */
+  max-width:720px;                    /* misma presencia visual */
+  width:100%;
+  text-align:center;
 }
 
-/* Título */
+/* TÍTULO */
 .newsletter-box h2 {
-  font-size: 18px; /* -20% */
-  margin-bottom: 8px;
-  font-weight: 500;
+  font-size:1.6rem;      /* proporcional a h2 de blog */
+  margin-bottom:0.6rem;
 }
 
-/* Texto */
+/* TEXTO */
 .newsletter-box p {
-  font-size: 12px; /* -20% */
-  margin-bottom: 18px;
+  font-size:1rem;
+  margin-bottom:1.4rem;
 }
 
-/* Inputs */
-.newsletter-box input[type="text"],
-.newsletter-box input[type="email"] {
-  width: 100%;
-  padding: 7px 9px; /* -33% */
-  margin-bottom: 9px;
-  border-radius: 7px;
-  border: 1px solid #ddd;
-  font-size: 12px; /* -20% */
-  box-sizing: border-box;
+/* FORM */
+#newsletter-form {
+  display:flex;
+  flex-direction:column;
+  gap:0.9rem;
 }
 
-/* Consentimiento */
-.newsletter-box .consent {
-  font-size: 11px; /* -20% */
-  display: block;
-  margin-bottom: 14px;
+/* INPUTS */
+#newsletter-form input[type="text"],
+#newsletter-form input[type="email"] {
+  padding:0.75rem 1rem;      /* no más inflados */
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:0.95rem;
 }
 
-/* Botón */
-.newsletter-box button {
-  background-color: #7a6a62;
-  color: white;
-  border: none;
-  padding: 8px 16px; /* -33% */
-  border-radius: 7px;
-  font-size: 12px; /* -20% */
-  cursor: pointer;
-  transition: all 0.25s ease;
+/* CHECKBOX */
+.consent {
+  font-size:0.85rem;
+  display:flex;
+  gap:0.5rem;
+  align-items:flex-start;
+  text-align:left;
 }
 
-.newsletter-box button:hover {
-  background-color: #64554e;
-  transform: translateY(-1px);
+/* BOTÓN */
+#newsletter-form button {
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:0.8rem;
+  border-radius:10px;
+  font-size:0.95rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#newsletter-form button:hover {
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* MENSAJE */
+#form-message {
+  margin-top:1rem;
+  font-size:0.95rem;
+  color:#4a7c59;
 }
 
 
