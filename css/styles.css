@@ -220,3 +220,55 @@ header h1 {
   box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
 }
 
+.newsletter {
+  padding: 80px 20px;
+  background: #f6f3ef;
+  text-align: center;
+}
+
+.newsletter-box {
+  max-width: 600px;
+  margin: auto;
+}
+
+.newsletter h2 {
+  margin-bottom: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.newsletter-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #7a6a62;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #5f514a;
+}
+
+.consent {
+  font-size: 13px;
+  text-align: left;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
