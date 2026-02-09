@@ -64,22 +64,32 @@
     <h2>Suscribite al newsletter</h2>
     <p>Recibí nuevas entradas del blog y materiales sobre psicología y migración.</p>
 
-    <form id="newsletter-form" action="https://formspree.io/f/mbdallno" method="POST" class="newsletter-form">
-      
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+    <form id="newsletter-form" 
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Tu nombre"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Tu correo electrónico"
+        required
+      >
 
       <label class="consent">
         <input type="checkbox" required>
-        Acepto recibir correos con contenido sobre psicología, migración y recursos terapéuticos.
+        Acepto recibir correos sobre psicología y migración.
       </label>
 
-      <button type="submit">Quiero suscribirme</button>
-
-      <!-- Mensaje oculto -->
-      <p id="form-message" class="form-message"></p>
-
+      <button type="submit">Suscribirme</button>
     </form>
+
+    <p id="form-message" style="display:none;">
+      ✨ Gracias por suscribirte. Pronto vas a recibir novedades.
+    </p>
   </div>
 </section>
 
@@ -126,37 +136,31 @@ document.addEventListener("DOMContentLoaded", function () {
 const form = document.getElementById("newsletter-form");
 const message = document.getElementById("form-message");
 
-form.addEventListener("submit", async function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const data = new FormData(form);
+  const data = {
+    nombre: form.nombre.value,
+    email: form.email.value
+  };
 
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    if (response.ok) {
-      message.textContent = "✨ Gracias por suscribirte. Pronto vas a recibir novedades.";
-      message.className = "form-message success";
-      message.style.display = "block";
-      form.reset();
-    } else {
-      message.textContent = "Ups… hubo un problema. Intentá nuevamente.";
-      message.className = "form-message error";
-      message.style.display = "block";
+  fetch("https://script.google.com/macros/s/AKfycbw8FcDLeBVTGNGqDKUuC-_GE99ib-OQhhOaxTjjo_lCwHKGzxkI8IzYoBG-8ToPUTr5sw/exec", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json"
     }
-  } catch (error) {
-    message.textContent = "Error de conexión. Probá más tarde.";
-    message.className = "form-message error";
+  })
+  .then(() => {
+    form.style.display = "none";
     message.style.display = "block";
-  }
+  })
+  .catch(() => {
+    alert("Hubo un error. Intentá nuevamente.");
+  });
 });
 </script>
+
 
 
   
