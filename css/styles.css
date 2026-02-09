@@ -305,3 +305,37 @@ header h1 {
   font-size: 1.2rem;
   color: #6f625a;
 }
+
+<section class="newsletter fade-in">
+  <div class="container newsletter-box">
+    <h2>Suscribite al newsletter</h2>
+    <p>Recibí nuevas entradas del blog y materiales sobre psicología y migración.</p>
+
+    <form id="newsletter-form" 
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Tu nombre"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Tu correo electrónico"
+        required
+      >
+
+      <label class="consent">
+        <input type="checkbox" required>
+        Acepto recibir correos sobre psicología y migración.
+      </label>
+
+      <button type="submit">Suscribirme</button>
+    </form>
+
+    <p id="form-message" style="display:none;">
+      ✨ Gracias por suscribirte. Pronto vas a recibir novedades.
+    </p>
+  </div>
+</section>
