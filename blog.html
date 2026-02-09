@@ -59,6 +59,33 @@
 
 
 
+<section class="newsletter fade-in">
+  <div class="container newsletter-box">
+    <h2>Suscribite al newsletter</h2>
+    <p>Recibí nuevas entradas del blog y materiales sobre psicología y migración.</p>
+
+    <form id="newsletter-form" action="https://formspree.io/f/mbdallno" method="POST" class="newsletter-form">
+      
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+      <label class="consent">
+        <input type="checkbox" required>
+        Acepto recibir correos con contenido sobre psicología, migración y recursos terapéuticos.
+      </label>
+
+      <button type="submit">Quiero suscribirme</button>
+
+      <!-- Mensaje oculto -->
+      <p id="form-message" class="form-message"></p>
+
+    </form>
+  </div>
+</section>
+
+
+    
+
     
 <section>
   <!-- Principio del widget de globo de Calendly -->
@@ -95,5 +122,43 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>
+const form = document.getElementById("newsletter-form");
+const message = document.getElementById("form-message");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      message.textContent = "✨ Gracias por suscribirte. Pronto vas a recibir novedades.";
+      message.className = "form-message success";
+      message.style.display = "block";
+      form.reset();
+    } else {
+      message.textContent = "Ups… hubo un problema. Intentá nuevamente.";
+      message.className = "form-message error";
+      message.style.display = "block";
+    }
+  } catch (error) {
+    message.textContent = "Error de conexión. Probá más tarde.";
+    message.className = "form-message error";
+    message.style.display = "block";
+  }
+});
+</script>
+
+
+  
 </body>
 </html>
