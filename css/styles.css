@@ -281,22 +281,24 @@ header h1 {
 }
 
 /* BOTÓN */
-#newsletter-form button {
-  background:var(--accent);
-  color:white;
-  border:none;
-  padding:0.8rem;
-  border-radius:10px;
-  font-size:0.95rem;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
+/* ===== NEWSLETTER BUTTON ===== */
+.newsletter-box button {
+  background: #7a6a62;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-#newsletter-form button:hover {
-  transform:translateY(-2px);
-  box-shadow:0 8px 18px rgba(0,0,0,0.15);
+.newsletter-box button:hover {
+  background: #66564f; /* un tono más profundo al pasar el mouse */
+  transform: translateY(-2px);
 }
+
 
 /* MENSAJE */
 #form-message {
