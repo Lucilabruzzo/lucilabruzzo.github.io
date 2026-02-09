@@ -272,3 +272,16 @@ header h1 {
   gap: 8px;
   align-items: flex-start;
 }
+.form-message {
+  margin-top: 12px;
+  font-size: 14px;
+  display: none;
+}
+
+.form-message.success {
+  color: #3c7a4a;
+}
+
+.form-message.error {
+  color: #b23a3a;
+}
