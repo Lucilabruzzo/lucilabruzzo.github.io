@@ -221,67 +221,36 @@ header h1 {
 }
 
 .newsletter {
-  padding: 80px 20px;
-  background: #f6f3ef;
+  background: #f5f1ee;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
-.newsletter-box {
-  max-width: 600px;
-  margin: auto;
-}
-
-.newsletter h2 {
-  margin-bottom: 10px;
-}
-
-.newsletter-form {
+.newsletter form {
+  max-width: 400px;
+  margin: 2rem auto 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 1rem;
 }
 
-.newsletter-form input[type="text"],
-.newsletter-form input[type="email"] {
-  padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
+.newsletter input,
+.newsletter button {
+  padding: 0.8rem;
+  font-size: 1rem;
 }
 
-.newsletter-form button {
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
+.newsletter button {
   background: #7a6a62;
   color: white;
-  font-size: 16px;
+  border: none;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
-.newsletter-form button:hover {
-  background: #5f514a;
+.newsletter button:hover {
+  background: #5f524b;
 }
 
 .consent {
-  font-size: 13px;
-  text-align: left;
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-}
-.form-message {
-  margin-top: 12px;
-  font-size: 14px;
-  display: none;
-}
-
-.form-message.success {
-  color: #3c7a4a;
-}
-
-.form-message.error {
-  color: #b23a3a;
+  font-size: 0.85rem;
 }
