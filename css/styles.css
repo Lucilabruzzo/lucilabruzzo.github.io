@@ -237,7 +237,11 @@ header h1 {
   max-width:720px;                    /* misma presencia visual */
   width:100%;
   text-align:center;
+
+  /* 🔥 MÁS ESPACIO ARRIBA Y ABAJO */
+  padding: 3rem 2.5rem;   /* antes seguramente era 2rem */
 }
+
 
 /* TÍTULO */
 .newsletter-box h2 {
