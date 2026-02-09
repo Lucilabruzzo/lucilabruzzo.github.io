@@ -230,7 +230,7 @@ header h1 {
 }
 
 .newsletter-box {
-  background:#fdfaf7;                 /* mismo color que blog-card */
+  background:#f6f3ef;                 /* mismo color que blog-card */
   padding:2rem;                       /* EXACTO */
   border-radius:18px;                 /* EXACTO */
   box-shadow:0 10px 30px rgba(0,0,0,0.05);  /* EXACTO */
