@@ -116,8 +116,10 @@
       <a href="privacy.html">Privacidad</a>
     </p>
   </footer>
-<script>
+
+  <script>
 document.addEventListener("DOMContentLoaded", function () {
+  // ===== FADE IN =====
   const elements = document.querySelectorAll(".fade-in");
 
   const observer = new IntersectionObserver((entries) => {
@@ -131,10 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
   elements.forEach(el => observer.observe(el));
 });
 
-
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-
+ // ===== NEWSLETTER =====
   const form = document.getElementById("newsletter-form");
   const message = document.getElementById("form-message");
 
@@ -148,20 +147,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch("https://script.google.com/macros/s/AKfycbw8FcDLeBVTGNGqDKUuC-_GE99ib-OQhhOaxTjjo_lCwHKGzxkI8IzYoBG-8ToPUTr5sw/exec", {
       method: "POST",
-      mode: "no-cors",   // ⚠️ CLAVE
-      headers: {
-        "Content-Type": "application/json"
-      },
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
-    })
-    .then(() => {
-      form.style.display = "none";
-      message.style.display = "block";
-    })
-    .catch(() => {
-      alert("Hubo un error. Intentá nuevamente.");
     });
 
+    form.style.display = "none";
+    message.style.display = "block";
   });
 
 });
