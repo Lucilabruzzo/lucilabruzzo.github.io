@@ -130,36 +130,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   elements.forEach(el => observer.observe(el));
 });
-</script>
 
-<script>
-const form = document.getElementById("newsletter-form");
-const message = document.getElementById("form-message");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-  const data = {
-    nombre: form.nombre.value,
-    email: form.email.value
-  };
+  const form = document.getElementById("newsletter-form");
+  const message = document.getElementById("form-message");
 
-  fetch("https://script.google.com/macros/s/AKfycbw8FcDLeBVTGNGqDKUuC-_GE99ib-OQhhOaxTjjo_lCwHKGzxkI8IzYoBG-8ToPUTr5sw/exec", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-  .then(() => {
-    form.style.display = "none";
-    message.style.display = "block";
-  })
-  .catch(() => {
-    alert("Hubo un error. Intentá nuevamente.");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const data = {
+      nombre: document.querySelector('input[name="nombre"]').value,
+      email: document.querySelector('input[name="email"]').value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbw8FcDLeBVTGNGqDKUuC-_GE99ib-OQhhOaxTjjo_lCwHKGzxkI8IzYoBG-8ToPUTr5sw/exec", {
+      method: "POST",
+      mode: "no-cors",   // ⚠️ CLAVE
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then(() => {
+      form.style.display = "none";
+      message.style.display = "block";
+    })
+    .catch(() => {
+      alert("Hubo un error. Intentá nuevamente.");
+    });
+
   });
+
 });
 </script>
+
 
 
 
