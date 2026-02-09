@@ -20,6 +20,12 @@ body {
   overflow-x: hidden;
 }
 
+  body {
+  position: relative;
+  z-index: 0;
+
+}
+
 /* ================= TIPOGRAFÍA ================= */
 h1, h2, h3, h4 { color: #241911; }
 p { margin-bottom: 1.2rem; color: #4a3a33; }
