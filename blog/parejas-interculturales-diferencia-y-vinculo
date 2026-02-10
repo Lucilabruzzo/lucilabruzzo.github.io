@@ -88,22 +88,22 @@ function getCookie(name) {
   return null;
 }
 
-function acceptCookies() {
-  setCookie('cookie_consent', 'yes', 365);
-  const banner = document.getElementById('cookie-banner');
-  if (banner) banner.style.display = 'none';
-}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".fade-in");
 
-// SOLO al cargar la página
-document.addEventListener("DOMContentLoaded", function() {
-  const banner = document.getElementById('cookie-banner');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.15 });
 
-  if (getCookie('cookie_consent') === 'yes') {
-    if (banner) banner.style.display = 'none';
-  }
+  elements.forEach(el => observer.observe(el));
 });
 </script>
-
 
 </body>
 </html>
